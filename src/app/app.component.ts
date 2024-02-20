@@ -15,13 +15,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 })
 export class AppComponent {
   title = 'prac-proj-angular';
-  students: Array<any> = studentsData;
-  filter: FormControl;
   isSidebarExpanded: boolean = true;
-  constructor(
-    private form: FormBuilder
-  ){
-    this.filter = this.form.control('', { nonNullable: true });
-
+  constructor(){
   }
 }
