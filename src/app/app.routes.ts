@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
-import { LandingComponent } from './landing/landing.component';
-import { StudentsRecordsComponent } from './students-records/students-records.component';
+import { authGuard } from './guard/auth.guard';
+import { LoginComponent } from './auth/login/login.component';
 
 export const routes: Routes = [
     {
-        path:'home',
-        component: LandingComponent
+        path:'login',
+        component: LoginComponent
     },
     {
-        path: 'students',
-        component: StudentsRecordsComponent 
-    }
+        path:'pages',
+        loadChildren: () => import('./pages/pages.module').then(n => n.PagesModule),
+        canMatch: [authGuard]
+    },
 ];

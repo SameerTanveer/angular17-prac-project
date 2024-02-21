@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import { AgGridAngular } from 'ag-grid-angular';
-import { studentsData } from '../../data/student';
+import { studentsData } from '../../../data/student';
 import { ColDef } from 'ag-grid-community';
 
 @Component({
   selector: 'app-students-records',
-  standalone: true,
-  imports: [AgGridAngular],
   templateUrl: './students-records.component.html',
   styleUrl: './students-records.component.scss'
 })

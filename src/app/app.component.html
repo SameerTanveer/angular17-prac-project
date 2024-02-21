@@ -1,7 +1,1 @@
-<app-side-bar
-  [isExpanded]="isSidebarExpanded"
-  (toggleSidebar)="isSidebarExpanded = !isSidebarExpanded"
-/>
-<div class="container" [ngClass]="isSidebarExpanded ? 'expandedSidebar' : ''">
-  <router-outlet />
-</div>
+<router-outlet />
