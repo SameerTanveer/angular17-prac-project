@@ -1,6 +1,6 @@
 <div class="sidebar" [ngClass]="{ expanded: isExpanded }">
   <div class="header">
-    <h1 class="title">Students Portal</h1>
+    <h1 class="title">Menu</h1>
     <div class="toggle" (click)="handleSidebarToggle()">
       <span class="chevron"></span>
     </div>
@@ -42,5 +42,14 @@
         <div class="title">Subjects</div>
       </div>
     </div>
+  </div>
+  <div class="logout-button">
+    <button
+      class="btn btn-outline-danger btn-sm"
+      [ngClass]="!isExpanded ? 'btn-small' : ''"
+      (click)="logout()"
+    >
+      Log Out
+    </button>
   </div>
 </div>

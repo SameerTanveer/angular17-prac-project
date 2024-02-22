@@ -152,4 +152,14 @@
 		}
     }
 }
-  
+
+.logout-button {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-top: 20%;
+	justify-content: space-around;
+}
+.btn-small{
+	width: 40px;
+ 	padding: 0;
+}

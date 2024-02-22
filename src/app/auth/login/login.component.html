@@ -1,1 +1,44 @@
-<p>login works!</p>
+<section class="login-section">
+  <div class="login-section__form">
+    <div class="login-section__head">
+      <h2>Login</h2>
+      <p class="text-white-50 mb-5">Please enter your login and password!</p>
+    </div>
+
+    <form #loginForm="ngForm" class="login-section__form--form-element">
+      <div class="login-section__form--field">
+        <input
+          id="ç"
+          name="username"
+          type="text"
+          class="form-control form-control-input"
+          [(ngModel)]="loginFormModel.username"
+          required
+        />
+        <label for="loginFormModel">Email</label>
+      </div>
+
+      <div class="login-section__form--field">
+        <input
+          id="password"
+          name="password"
+          type="password"
+          class="form-control form-control-input"
+          [(ngModel)]="loginFormModel.password"
+          required
+        />
+        <label for="password">Password</label>
+      </div>
+
+      <p><a href="#">Need a new account ?</a></p>
+
+      <button
+        [disabled]="!loginForm.valid"
+        class="btn btn-outline-light btn-sm px-5"
+        (click)="login(loginForm)"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</section>
